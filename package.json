@@ -1,5 +1,5 @@
 {
-  "name": "Bibleoteca",
+  "name": "bibleoteca",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -8,5 +8,13 @@
   "keywords": [],
   "author": "A.A.P.C",
   "license": "ISC",
-  "description": "Proyecto Bibleoteca escolar"
+  "description": "Repositorio de Bibleoteca de A.A.P.C",
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^6.15.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "prisma": "^6.15.0"
+  }
 }
