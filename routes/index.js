@@ -8,6 +8,11 @@ servidor.use('/productos', productosRoutes)
 servidor.use('/ventas', ventasRoutes)
 servidor.use('/usuarios', usuariosRoutes)
 servidor.use('/admin', adminRoutes)
+servidor.use((req,res,next)=> {
+    res.status(404).json({
+    error:"Ruta no encontrada",
+  })
+})
 }
 
 export default registerRoutes;

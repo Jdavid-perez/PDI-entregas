@@ -1,7 +1,8 @@
 import express from 'express';
-
+import prisma from "../lib/prisma.js";
+import logger from "../middlewares/logger.js"
 const router = express.Router();
-
+router.use(logger)
 router.get("/", async(req, res) => {
     try{
     const admin= await prisma.admin.findMany();

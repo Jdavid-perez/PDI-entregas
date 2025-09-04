@@ -1,10 +1,10 @@
 // routes/productos.routes.js
-
+import express from "express";
 import { Router } from "express";
 import prisma from "../lib/prisma.js";
-
-const router = Router();
-
+import logger from "../middlewares/logger.js"
+const router = express.Router();
+router.use(logger)
 router.get("/", async (req, res) => {
   try{
   const productos = await prisma.productos.findMany();
@@ -70,5 +70,4 @@ router.put('/:id', async (req, res) =>{
     res.status(500).json({ error: error.message });
   }
 });
-
 export default router;
